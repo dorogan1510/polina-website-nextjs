@@ -1,0 +1,215 @@
+/*Reset CSS*/
+* {
+    padding: 0;
+    margin: 0;
+}
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+:focus,
+:active {
+    outline: none;
+}
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+button {
+    cursor: pointer;
+}
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+a,
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+ul li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+/*--------------------*/
+
+// Variables
+
+// colors
+$fc1: white;
+$fc2: #344767;
+$fc3: #2d86ec;
+
+// for h2
+$fsh2: 30px;
+$fwh2: 700;
+$ffh2: var(--font-roboto-slab);
+
+// for h3
+$fsh3: 20px;
+$fwh3: 700;
+$ffh3: var(--font-roboto);
+
+// for p
+$fsp: 16px;
+$fwp: 300;
+$ffp: var(--font-roboto);
+
+// for buttons
+$fsbtn: 12px;
+$fwbtn: 700;
+
+// Mixins
+%h2 {
+    color: $fc1;
+    font-size: $fsh2;
+    font-weight: $fwh2;
+    font-family: $ffh2;
+
+    padding: 2rem 0;
+}
+
+%h3 {
+    color: $fc2;
+    font-size: $fsh3;
+    font-weight: $fwh3;
+    font-family: $ffh3;
+
+    margin-bottom: 1rem;
+}
+
+%p {
+    color: $fc2;
+    font-size: $fsp;
+    font-weight: $fwp;
+    font-family: $ffp;
+}
+
+%btn {
+    display: inline-block;
+    color: $fc1;
+    font-size: $fsbtn;
+    font-weight: $fwbtn;
+    font-family: var(--font-roboto);
+    background-color: $fc3;
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    border: 0;
+    text-transform: uppercase;
+    text-align: center;
+    transition: 0.3s;
+
+    &:hover {
+        -webkit-box-shadow: 0px 14px 34px -11px rgba(45, 134, 236, 0.8);
+        -moz-box-shadow: 0px 14px 34px -11px rgba(45, 134, 236, 0.8);
+        box-shadow: 0px 14px 34px -11px rgba(45, 134, 236, 0.8);
+        // color: $fc3;
+        // background-color: $fc1;
+        transition: 0.3s;
+    }
+}
+
+@import '1.hero_section';
+@import '2.study';
+@import '3.benefits';
+@import '4.team';
+@import '5.prices';
+@import '6.offer';
+@import '6.reviews';
+@import '7.questions';
+@import '8.footer';
+
+// START
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-roboto) var(--font-roboto-slab);
+    background-color: #edeff2;
+}
+
+h1 {
+    font-family: var(--font-roboto-slab);
+    font-weight: 700;
+    font-size: 48px;
+
+    color: $fc1;
+}
+
+main {
+    background-color: #fcfcfd;
+    margin: 0 1rem;
+    border-radius: 20px;
+    padding-bottom: 3rem;
+}
+
+.page {
+    margin: 0 auto;
+    max-width: 1920px;
+
+    padding-bottom: 3rem;
+}
+
+@media (max-width: 760px) {
+    main {
+        margin: 0 0.5rem;
+    }
+
+    h1 {
+        font-family: var(--font-roboto-slab);
+        font-weight: 700;
+        font-size: 26px;
+
+        color: $fc1;
+    }
+
+    %h2 {
+        font-size: 26px;
+    }
+
+    %h3 {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,99 @@
+.prices {
+    background: white;
+    padding: 0 0 2rem;
+
+    h2 {
+        @extend %h2;
+        text-align: center;
+    }
+
+    &__info {
+        height: 150px;
+        width: 100%;
+        background-image: url('../../public/img/bgprice.webp');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+        margin-bottom: 2rem;
+    }
+
+    &__group {
+        height: 150px;
+        width: 100%;
+
+        background-image: url('../../public/img/bgprice2.webp');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    p {
+        @extend %p;
+        color: white;
+        text-align: center;
+    }
+
+    img {
+        max-width: 300px;
+        height: auto;
+        margin: -3rem 0 0;
+    }
+
+    &__flex1 {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin: -2rem 0 3rem;
+    }
+
+    &__flex2 {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 760px) {
+    .prices {
+        &__flex1 {
+            flex-direction: column;
+            align-items: center;
+            img {
+                margin: -2rem 0 0;
+
+                &:first-child {
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+
+        &__flex2 {
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                margin: -2rem 0 0;
+
+                &:first-child {
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+
+        &__info {
+            height: 200px;
+        }
+        &__group {
+            height: 200px;
+        }
+    }
+}
