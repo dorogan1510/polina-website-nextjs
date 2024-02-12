@@ -41,7 +41,7 @@
 
     &__member {
         &:last-child {
-            margin-bottom: 7rem;
+            margin-bottom: 4rem;
         }
         display: flex;
         justify-content: space-between;
@@ -92,8 +92,6 @@
 
 @media (max-width: 760px) {
     .team {
-        padding: 0.5rem;
-
         &__member {
             flex-direction: column;
             max-width: 400px;
